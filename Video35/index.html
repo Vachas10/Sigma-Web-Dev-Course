@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box:nth-child(1){
+            background-color: red;
+        } */
+
+        /* .boxes *{
+            background-color: aqua;
+            border: 2px solid black;
+            margin: 5px;
+        } */
+
+        /* a, p, .box, [data-col="primary"]{
+            padding-top: 22px;
+        } */
+         /* .box:nth-child(odd){
+            background-color: aquamarine;
+         } */
+        /* .box:nth-last-child(1){
+            background-color: red;
+        } */
+        .boxes::before{
+            content: "Radheshyam";
+        }
+        /* .boxes::after{
+            content: "flop movie";
+        } */
+        ::selection{
+            background-color: rgb(56, 222, 56);
+        }
+        .box::first-letter{
+            color:blueviolet;
+            font-size: 44px;
+            font-style: oblique;
+        }
+        input::placeholder{
+            color:blue;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-col="primary" class="box">hey iam a box</div>
+        <div class="box">hey iam a box</div>
+        <div class="box">hey iam a box</div>
+        <input type="text" placeholder="Enter ur input here">
+    </div>
+</body>
+</html>

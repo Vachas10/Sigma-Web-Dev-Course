@@ -17,17 +17,25 @@
         padding: 3px;
       }
       .box1 {
-        position: relative;
+        /* position: sticky;
+        top: 0px;
+        height: 111px;
+        width: 100%;
+        margin: 0;
+        padding: 0; */
+        position: absolute;
+        top: 0px;
+        left: 3px;
         background-color: aqua;
       }
       .box2 {
-        position: relative;
+        /* position: relative; */
         top: 45px;
         left: 54px;
         background-color: azure;
       }
       .box3 {
-        position:fixed;
+        /* position:fixed; */
         bottom: 0px;
         left: 25vw;
         background-color: antiquewhite;
@@ -39,6 +47,11 @@
         padding: 43px;
         margin: 34px;
         border: 3px solid purple;
+        /* Exception: transform, filter, perspective can make an elements appear as positioned */
+        /* position: relative; */
+        /* transform: translate(0); */
+        /* filter: invert(); */
+        /* perspective: 0em; */
       }
     </style>
   </head>
