@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(13, 148, 163);
+            height: 80vh;
+            width: 80vw;
+            position: relative;
+        }
+        .box{
+            background-color: red;
+            height: 121px;
+            width: 121px;
+            border-radius: 70px;
+            position: absolute;
+            left:0;
+            bottom:0;
+            /* animation: mybounce ease-in-out 0.5s infinite alternate; */
+           animation: bouncex 3s linear infinite,
+                      bouncey 1s ease-out infinite alternate;
+           
+        }
+
+        @keyframes bouncex {
+            from{
+                left: 0;
+            }
+            to{
+                left: 90%;
+              
+
+            }
+        }
+        @keyframes bouncey {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 85%;
+              
+
+            }
+        }
+
+/* 
+        @keyframes mybounce {
+            0%{
+                
+                }
+            
+            10% {
+                transform: translate3d(20px, -60px, 0px );
+            }
+            30% {
+                transform: translate3d(40px, -160px, 0px );
+            }
+            40% {
+                transform: translate3d(60px, -240px, 0px );
+            }
+            50% {
+                transform: translate3d(80px, -320px, 0px );
+            }
+            60% {
+                transform: translate3d(100px, -240px, 0px );
+            }
+            70% {
+                transform: translate3d(120px, -160px, 0px );
+            }
+            80% {
+                transform: translate3d(140px, -90px, 0px );
+            }
+            90% {
+                transform: translate3d(160px, -60px, 0px );
+            }
+            100% {
+                transform: translate3d(180px, 0px, 0px );
+            }
+            
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

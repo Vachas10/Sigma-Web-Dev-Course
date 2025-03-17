@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(26, 23, 23);
+        }
+        .container{
+            margin: auto;
+            height: 99px;
+            width: 75%;
+            border: 2px solid black;
+            background-color: rgb(39, 39, 39);
+            padding: 13px;
+            display: flex;
+            color: white;
+            gap: 15px;
+        }
+        .container  img{
+            width: 210px;
+            height:89px;
+            padding-left: 50px;
+            border-radius: 10px;
+        }
+        
+        .myduration{
+            padding: 2px;
+            border-radius: 3px;
+            font-size: 14px;
+            bottom: 15px;
+            position: absolute;
+            right: 9px;
+            background-color: #363535;
+            color: white;
+        }
+
+        .texts p {
+            padding: 4px 0px;
+        }
+        ul{
+            display: flex;
+            gap: 25px;
+        }
+        ul li:first-child{
+            list-style: none;
+        }
+        .box{
+            position: relative;
+        }
+
+        @media screen and (max-width:1120px){
+          .container{width:85%}
+          .container img{
+            width: 145px;
+            height: 89px;
+            padding-left: 0px;
+            border-radius: 10px;
+          }
+          .heading {font-size: 18px;}
+
+          .ulist {gap: 5px 18px; flex-wrap: wrap;}
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="box">
+            <img class="mythumbnail"  src="" alt="thumbnail image">
+            <span class="myduration"></span>
+        </div>
+        
+        <div class="texts">
+            <h2 class="heading"></h2>
+            <p>
+                <ul class="ulist">
+                    <li class="mycname"></li>
+                    <li class="mynewviews"></li>
+                    <li class="mymonthsold"></li>
+                </ul>
+            </p>
+        </div>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
