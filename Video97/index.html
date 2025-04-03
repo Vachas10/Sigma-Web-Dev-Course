@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummy Data Generator</title>
+  </head>
+  <body>
+    <div class="box">
+      <button class="btn">Generate Random data</button>
+    </div>
+
+    <script>
+      const names = [
+        "Emily",
+        "Liam",
+        "Sophia",
+        "Noah",
+        "Olivia",
+        "Ethan",
+        "Ava",
+        "Lucas",
+        "Isabella",
+        "Mason",
+        "Mia",
+        "Logan",
+        "Charlotte",
+        "William",
+        "Abigail",
+        "Benjamin",
+        "Harper",
+        "Caleb",
+        "Evelyn",
+        "Alexander",
+      ];
+      const programmingLanguages = [
+        "JavaScript",
+        "Python",
+        "Java",
+        "C++",
+        "C#",
+        "Ruby",
+        "Swift",
+        "PHP",
+        "Go",
+        "Rust",
+      ];
+      const cities = [
+        "Tokyo",
+        "Delhi",
+        "Shanghai",
+        "São Paulo",
+        "Mexico City",
+        "Cairo",
+        "Vizag",
+        "Mumbai",
+        "Beijing",
+        "Osaka",
+        "New York",
+        "Jakarta",
+        "Seoul",
+        "Manila",
+        "Guangzhou",
+        "Moscow",
+        "Buenos Aires",
+        "Bangkok",
+        "Istanbul",
+        "Lagos",
+      ];
+        const isManager = ["true", "false"]
+      function getRandomIndex(array) {
+        return Math.floor(Math.random() * array.length);
+      }
+
+      async function handleClick() {
+        const employeeData = {
+          name: names[getRandomIndex(names)],
+          salary: getRandomIndex([...Array(20)]) * 10000, // Generates 0-190,000
+          programmingLanguage:
+            programmingLanguages[getRandomIndex(programmingLanguages)],
+          city: cities[getRandomIndex(cities)],
+          isManager: isManager[getRandomIndex(isManager)],
+        };
+
+        try {
+          const response = await fetch("http://localhost:3000/add-employee", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(employeeData),
+          });
+          const result = await response.json();
+          console.log("Server response:", result);
+        } catch (error) {
+          console.error("Fetch error:", error);
+        }
+      }
+
+      document.querySelector(".btn").addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

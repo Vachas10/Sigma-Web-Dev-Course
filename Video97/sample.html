@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Employee</title>
+</head>
+<body>
+  <button onclick="addEmployee()">Add Sample Employee</button>
+
+  <script>
+    async function addEmployee() {
+      const employeeData = {
+        name: "John Doe",
+        role: "Developer"
+      };
+
+      try {
+        const response = await fetch('http://localhost:3000/add-employee', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(employeeData)
+        });
+ 
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+  </script>
+</body>
+</html>
